@@ -26,3 +26,6 @@ Possible future work
 2. Implement more operations in SplayStringEditor based on SplayRope
 3. Implement UI
 4. Make it a web based application
+
+Demo Picture
+1. Under the root of this repository
