@@ -10,12 +10,12 @@ SplayStringEditor::SplayStringEditor(const string& s) {
 }
 
 void SplayStringEditor::insert(int index, const string& s) {//O(log(S) + T)   S:length of original string,   T:length of the inserted string
-    SplayRope newRope(s);                                   //std::string: O(S)
+    SplayRope newRope(s);                                   //std::string: O(S + T)
     rope.insert(rope.getRoot(), index, newRope.getRoot());
 }
 
 void SplayStringEditor::remove(int startindex, int endindex) {//O(log(S) + T)    S:length of original string    T = endindex - startindex + 1
-    rope.remove(rope.getRoot(), startindex, endindex);        //std::string: O(S)
+    rope.remove(rope.getRoot(), startindex, endindex);        //std::string: O(S + T)
 }
 
 string SplayStringEditor::substring(int startindex, int endindex) {//O(log(S) + T)    S:length of original string    T = endindex - startindex + 1

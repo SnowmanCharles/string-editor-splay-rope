@@ -1,5 +1,9 @@
 #include <iostream>
 #include "src/lib/SplayStringEditor.h"
+#include <chrono>
+
+using namespace std::chrono;
+
 
 int main() {
     cout << endl << endl << "******************************************************  Splay_String_Editor  VS  Std::String_Library  ********************************************************" << endl;
@@ -148,7 +152,7 @@ int main() {
     cout << endl << endl << "****************Testing with long strings********************************************************************************" << endl;
     //testing insert
     cout << "*****Testing insert*****" << endl;
-    for (int i = 0; i < 10000000; i++) {
+    for (int i = 0; i < 1000000; i++) {
         s += add;
     }
     SplayStringEditor editor2(s);
